@@ -14,7 +14,7 @@
   <!-- Video -->
   <div class="container ">
     <video controls class="section-video">
-      <source src="videos/video.mp4" type="video/mp4" />
+      <source src="videos/presentation.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -22,7 +22,7 @@
   <!-- About Ourselves -->
   <section>
     <h2 class="text-primary">About Ourselves</h2>
-    <p>    <strong>Ilgaz Çavdar</strong> and <strong>Uygar Mutlu</strong> are undergraduate students in Computer Science, <strong>Berkant Aksoy</strong> and <strong>Tuncer Sivri</strong>undergraduate students in Artifical Intelligence. Together, we have developed E-VLLM.</p>
+    <p>    <strong>Ilgaz Çavdar</strong> and <strong>Uygar Mutlu</strong> are undergraduate students in Computer Science, <strong>Berkant Aksoy</strong> and <strong>Tuncer Sivri</strong> are undergraduate students in Artifical Intelligence. Together, we have created E-VLLM.</p>
   </section>
 
   <!-- Abstract -->
@@ -41,10 +41,19 @@ Our results show that multimodal models using event data have great potential bu
   <!-- Methodology -->
   <section>
     <h2 class="text-primary">Methodology</h2>
+
+    <p class="text-justify">
+      Overview of our framework. The encoder is responsible for converting event streams into high dimensional features. Which then are projected and aligned with LLM's space. Which at the end enables understanding of event streams and support of downstream tasks.
+    </p>
     <div class="row g-3 justify-content-center">
       <div class="col-12 col-md-8">
         <img src="images/method1.jpg" class="img-fluid rounded section-image mx-auto d-block" alt="Method Image">
       </div>
+      <p class="text-justify">
+  We have developed and experimented with two different encoder architectures for various reasons.<br>
+  <strong>1. EZSR Pipeline:</strong> CLIP-based event encoder.<br>
+  <strong>2. EvRepSL Pipeline:</strong> EvRepSL and CNN+Transformer-based event encoder.
+</p>
       <div class="col-12 col-md-8">
         <img src="images/method2.jpg" class="img-fluid rounded section-image mx-auto d-block" alt="Method Image">
       </div>
@@ -64,7 +73,7 @@ Our results show that multimodal models using event data have great potential bu
         <img src="videos/result1.gif" class="img-fluid rounded shadow-sm section-image mb-2" alt="Result GIF 1">
         <figcaption class="gif-caption">
           <strong>Instruction:</strong> What action is visible in the given event stream?<br>
-          <strong>Ours:</strong> Nod head.<br>
+          <strong>E-VLLM:</strong> Nod head.<br>
           <strong>GT:</strong> Nod head.
         </figcaption>
       </figure>
@@ -88,7 +97,7 @@ Our results show that multimodal models using event data have great potential bu
         <img src="videos/result3.gif" class="img-fluid rounded shadow-sm section-image mb-2" alt="Result GIF 3">
         <figcaption class="gif-caption">
           <strong>Instruction:</strong> What is happening in the scene?<br>
-          <strong>Ours:</strong> The action of jumping up is central here.<br>
+          <strong>E-VLLM:</strong> The action of jumping up is central here.<br>
           <strong>GT:</strong> The subject leaps forward with both feet during a long jump.
         </figcaption>
       </figure>
