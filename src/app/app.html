@@ -9,9 +9,6 @@
     <a href="https://github.com/EVLLM/EVLLM" target="_blank" class="btn btn-outline-primary btn-custom">
       <i class="bi bi-github me-1"></i> GitHub
     </a>
-    <a href="assets/files/event-paper.pdf" target="_blank" class="btn btn-outline-secondary btn-custom">
-      <i class="bi bi-file-earmark-pdf me-1"></i> Report
-    </a>
   </div>
 
   <!-- Video -->
@@ -25,50 +22,87 @@
   <!-- About Ourselves -->
   <section>
     <h2 class="text-primary">About Ourselves</h2>
-    <p>...</p>
+    <p>    <strong>Ilgaz Çavdar</strong> and <strong>Uygar Mutlu</strong> are undergraduate students in Computer Science, <strong>Berkant Aksoy</strong> and <strong>Tuncer Sivri</strong>undergraduate students in Artifical Intelligence. Together, we have developed E-VLLM.</p>
   </section>
 
   <!-- Abstract -->
   <section>
     <h2 class="text-primary">Abstract</h2>
-    <p>...</p>
+    <p class="text-justify">Event cameras are vision sensors inspired by human eyes. They capture asynchronous changes in brightness with high temporal precision and dynamic range making them ideal for high motion scenarios and challenging lighting conditions. In spite of their advantages, the irregular nature of event data poses significant challenges for traditional machine learning models, most notable in semantic interpretation and natural language generation tasks.
+This project targets the central challenge of enabling multimodal large language models  to meaningfully interpret and describe event stream inputs. Our work explores two core alignment strategies: First, mapping the event data onto structured linguistic representations. Second, enhancing existing MLLM architectures to use the unique strengths of event data rather than relying on conventional image-like summaries.
+We propose a multimodal architecture integrating event-specific encoders and linear projectors that aligns event-based representations with the embedding space of a powerful language model, Mistral-7B. Our pipeline can handle event streams of any length, capturing essential spatiotemporal dynamics and enabling open-ended text generation and instruction following.
+Through extensive experiments with both synthetic and native event datasets, we demonstrated that our model effectively learns to produce contextually accurate descriptions and robustly handle inputs of different lengths. Comparative evaluations show significant performance improvements over the only existing Event MLLM EventGPT in tasks requiring temporal understanding.
+Our results show that multimodal models using event data have great potential but they also face challenges. Moving forward, we aim to improve how these models connect event data with language, gather more detailed real-world data and make the models run more efficiently. This research lays important groundwork for combining event-based vision with natural language, which could greatly benefit real-time robotics, security systems, and assistive technologies.
+</p>
   </section>
 
   <!-- Knowledge / Background -->
-  <section>
-    <h2 class="text-primary">Knowledge / Background</h2>
-    <p>...</p>
-    <div class="row g-3 justify-content-center">
-      <div class="col-md-6">
-        <img src="images/image1.png" class="img-fluid rounded section-image mx-auto d-block" alt="Knowledge Image">
-      </div>
-    </div>
-  </section>
 
   <!-- Methodology -->
   <section>
     <h2 class="text-primary">Methodology</h2>
-    <p>...</p>
     <div class="row g-3 justify-content-center">
       <div class="col-12 col-md-8">
-        <img src="images/image2.webp" class="img-fluid rounded section-image mx-auto d-block" alt="Method Image">
+        <img src="images/method1.jpg" class="img-fluid rounded section-image mx-auto d-block" alt="Method Image">
+      </div>
+      <div class="col-12 col-md-8">
+        <img src="images/method2.jpg" class="img-fluid rounded section-image mx-auto d-block" alt="Method Image">
+      </div>
+      <div class="col-12 col-md-8">
+        <img src="images/method3.jpg" class="img-fluid rounded section-image mx-auto d-block" alt="Method Image">
       </div>
     </div>
   </section>
 
-  <!-- Results -->
   <section>
-    <h2 class="text-primary">Results</h2>
-    <p>...</p>
-    <div class="row g-3 justify-content-center">
-      <div class="col-sm-6 col-lg-4">
-        <img src="images/image1.png" class="img-fluid rounded shadow-sm section-image mx-auto d-block" alt="Result Image 1">
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <img src="images/image2.webp" class="img-fluid rounded shadow-sm section-image mx-auto d-block" alt="Result Image 2">
-      </div>
-      <div class="col-sm-6 col-lg-4">
-        <img src="images/image2.webp" class="img-fluid rounded shadow-sm section-image mx-auto d-block" alt="Result Image 3">
+  <h2 class="text-primary">Results</h2>
+  <div class="row g-4 justify-content-center">
+    
+    <!-- GIF 1 -->
+    <div class="col-sm-6 col-lg-4">
+      <figure class="text-center result-block">
+        <img src="videos/result1.gif" class="img-fluid rounded shadow-sm section-image mb-2" alt="Result GIF 1">
+        <figcaption class="gif-caption">
+          <strong>Instruction:</strong> What action is visible in the given event stream?<br>
+          <strong>Ours:</strong> Nod head.<br>
+          <strong>GT:</strong> Nod head.
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- GIF 2 -->
+    <div class="col-sm-6 col-lg-4">
+      <figure class="text-center result-block">
+        <img src="videos/result2.gif" class="img-fluid rounded shadow-sm section-image mb-2" alt="Result GIF 2">
+        <figcaption class="gif-caption">
+          <strong>Instruction:</strong> Describe the movement pattern visible<br>
+          <strong>E-VLLM:</strong> Running in circles is maintained throughout.<br>
+          <strong>GT:</strong> A spiral pattern is traced by running in circles.
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- GIF 3 -->
+    <div class="col-sm-6 col-lg-4">
+      <figure class="text-center result-block">
+        <img src="videos/result3.gif" class="img-fluid rounded shadow-sm section-image mb-2" alt="Result GIF 3">
+        <figcaption class="gif-caption">
+          <strong>Instruction:</strong> What is happening in the scene?<br>
+          <strong>Ours:</strong> The action of jumping up is central here.<br>
+          <strong>GT:</strong> The subject leaps forward with both feet during a long jump.
+        </figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+
+  <section>
+    <h2 class="text-primary">Poster</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <img src="images/poster.png" class="img-fluid " alt="Knowledge Image">
       </div>
     </div>
   </section>
