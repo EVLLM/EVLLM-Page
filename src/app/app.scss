@@ -1,16 +1,105 @@
-.container {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+$primary:    #002147;
+$secondary:  #004e89;
+$text:       #333333;
+$body-bg:    #f0f4f8;
+$section-bg: #ffffff;
+$border:     #dde1e7;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: $body-bg;
+  color: $text;
+  line-height: 1.8;
+  font-size: 1.25rem;
+  scroll-behavior: smooth;
+  background-image:
+    radial-gradient(circle at top left, rgba($primary, 0.06), transparent 50%),
+    radial-gradient(circle at bottom right, rgba($secondary, 0.06), transparent 50%);
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+}
+
+h1 {
+  font-size: 3rem;
+  color: $primary;
+  margin-top: 2rem;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+h4, h5 {
+  font-size: 1.5rem;
+  color: $primary;
+}
+
+// Full-width sections
+section {
+  background-color: $section-bg;
+  border: 1px solid $border;
+  border-radius: 0;
   padding: 2rem;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  text-align: center;
+  animation: fadeIn 0.8s ease both;
+}
+
+.btn-custom {
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+}
+.btn-outline-primary.btn-custom {
+  color: $primary;
+  border: 2px solid $primary;
+  background-color: transparent;
+}
+.btn-outline-primary.btn-custom:hover {
+  background-color: $primary;
+  color: white;
+}
+.btn-outline-secondary.btn-custom {
+  color: $secondary;
+  border: 2px solid $secondary;
+  background-color: transparent;
+}
+.btn-outline-secondary.btn-custom:hover {
+  background-color: $secondary;
   color: white;
 }
 
-.card-img-top {
-  transition: transform 0.3s ease;
+.section-video {
+  width: 95%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
 }
 
-.card-img-top:hover {
-  transform: scale(1.03);
+
+.section-image {
+  display: block;
+  margin: 0 auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.title-highlight {
+  background: linear-gradient(90deg, $primary, $secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
